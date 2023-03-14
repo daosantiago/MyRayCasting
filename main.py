@@ -1,11 +1,12 @@
-from settings import *
 import sys
+
+from settings import *
 
 
 class App:
     def __init__(self):
         pg.init()
-        pg.display.set_caption('APP')
+        pg.display.set_caption('My RayCasting')
         self.screen = pg.display.set_mode(FIELD_RES)
         self.clock = pg.time.Clock()
 

@@ -32,10 +32,10 @@ class Map:
         for j, row in enumerate(self.matrix):
             for i, value in enumerate(row):
                 if value:
-                    # stores only the cells to be draw
-                    self.map[(i, j)] = value
+                    # stores only the cells (with coordinates in i and j) to be draw
+                    self.map[(i, j)] = 0  # the value doesn't matter
 
     def draw(self):
         for pos in self.map:
-            pg.draw.rect(self.game.screen, 'red', (pos[0] * TILE_SIZE,
-                                                   pos[1] * TILE_SIZE, TILE_SIZE, TILE_SIZE), 2)
+            pg.draw.rect(self.game.screen, 'red',
+                         (pos[0] * TILE_SIZE, pos[1] * TILE_SIZE, TILE_SIZE, TILE_SIZE), 2)

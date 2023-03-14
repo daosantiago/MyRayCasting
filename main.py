@@ -10,10 +10,11 @@ class App:
         pg.display.set_caption('My RayCasting')
         self.screen = pg.display.set_mode(FIELD_RES)
         self.clock = pg.time.Clock()
+        self.delta_time = 1
         self.map = Map(self)
 
     def update(self):
-        self.clock.tick(FPS)
+        self.delta_time = self.clock.tick(FPS)
 
     def draw(self):
         self.screen.fill(color=FIELD_COLOR)
